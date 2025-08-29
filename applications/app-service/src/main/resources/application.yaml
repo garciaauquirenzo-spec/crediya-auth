@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "CrediyaAuth"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+adapters:
+  r2dbc:
+    host: 161.132.40.87
+    port: 5432
+    database: crediya
+    schema: public
+    username: postgres
+    password: Naysha17
+logging:
+  level:
+    root: INFO
+    co.com.pragma: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"
