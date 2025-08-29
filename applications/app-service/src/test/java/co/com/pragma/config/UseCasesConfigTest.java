@@ -31,7 +31,7 @@ public class UseCasesConfigTest {
     static class TestConfig {
 
         @Bean
-        public MyUseCase myUseCase() {
+        public MyUseCase registrarUsuarioUseCase() {
             return new MyUseCase();
         }
     }
